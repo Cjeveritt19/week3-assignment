@@ -1,20 +1,38 @@
 console.log("hello world")
 
 // game logic
-// when the user clicks on the cookie, the total count of cookies goes up by 1
+// when the user clicks on the cookie, the total count of cookies goes up by 1 
+const cookieButton = document.getElementById("cookie-button");
 // when the user clicks on the buy button in an upgrade in the shop, the total count of cookies goes down by the cost of the upgrade, and the cps value goes up
+const upgrades = document.getElementById("upgrades");
+
+const cookieAmmount = document.getElementById("cookieAmmount")
+
+let cookies = 0;
+let clickValue =  1;
+
+let upgrade = 10;
+let upgradeCost = 100;
+
+const image = document.querySelector("img") ;
+    image.addEventListener("click", updateCookieAmmount => {})
 
 // you will need functions to contain the game logic 
+
 // to create the logic for the shop upgrades: 
 // OPTION 1: you could have a function per upgrade
 // OPTION 2: you could have a reuseable function that works for ALL the upgrades 
+function updateCookieAmmount() {
+    cookieAmmount.innerText = "You have" + cookies  +  "cookies!"
+}
 
+updateCookieAmmount()
 // tip on local storage:
-// -make sure th local storage values are update after the user buys an upgrade or when the user clicks on the cookie
+// -make sure the local storage values are update after the user buys an upgrade or when the user clicks on the cookie
 
 //  data storage 
-let cookiecount = 0;
-let cps = 0;
+// let cookieCount = 0;
+// let cps = 0;
 
 // let stats = {
 //     cookiecount: 0,
@@ -46,8 +64,8 @@ let cps = 0;
 
 // the interval
 
-setInterval( function() {
-    cookieCount += cps; // cookiecount = cookieCount += cps
-    // update the DOM to reflect the changes in the values 
-    // save values to the local storage 
-}, 1000);
+// setInterval( function() {
+//     cookieCount += cps; // cookiecount = cookieCount += cps
+//     // update the DOM to reflect the changes in the values 
+//     // save values to the local storage 
+// }, 1000);
