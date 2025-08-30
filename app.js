@@ -7,7 +7,7 @@ const upgradeButton = document.getElementById("upgrade")
 
 
 let cookieCount = 0;
-let cps = 0;
+let cps = 1;
 
 cookie.addEventListener("click", () => {
     cookieCount++;
@@ -21,3 +21,9 @@ function updateCookieCountDisplay() {
 }
 
 updateCookieCountDisplay()
+
+
+setInterval(function () {
+    cookieCount += cps;
+    updateCookieCountDisplay()
+}, 1000);
